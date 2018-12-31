@@ -1,0 +1,41 @@
+<div class="row small-up-2 medium-up-3 large-up-4">
+	<a href="/admin/add" class="button success">Add Project</a>
+	<a href="/" class="float-right button default">Home</a>
+	<br />
+
+	{{#if projects}}
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+				<th></th>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Service</th>
+				<th></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+			{{#each projects}}
+				<tr>
+					<td>
+                        {{#if image}}
+                            <img class="small-img" src="/avatar/{{image}}"/>
+                        {{else}}
+                            <img class="small-img" src="/images/no_image.png"/>
+                        {{/if}}
+					</td>
+					<td>{{id}}</td>
+					<td>{{title}}</td>
+					<td>{{service}}</td>
+					<td>
+						<a href="/admin/edit/{{id}}" class="button detault">Edit</a>
+						<a data-id="{{id}}" class="button alert delete-project">Delete</a>
+					</td>
+				</tr>
+			{{/each}}
+		  </tbody>
+		</table>
+	{{else}}
+		<div class="column"><p>No projects.</p></div>
+	{{/if}}
+</div>

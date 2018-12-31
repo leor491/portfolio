@@ -1,0 +1,29 @@
+<div class="row column">
+	<p><a href="/">Go Back</a></p>
+</div>
+{{#if project}}
+	<div class="row column">
+		<h1>{{project.title}}</h1>
+	</div>
+	<div class="row">
+		<div class="two_col column large-6 columns">
+            {{#if project.image}}
+                <img src="/avatar/{{project.image}}"/>
+            {{else}}
+                <img src="/images/no_image.png"/>
+            {{/if}}
+		</div>
+		<div class="two_col column large-6 columns">
+			<ul>
+				<li><strong>Client:</strong> {{project.client}}</li>
+				<li><strong>Project Date:</strong> {{project.date}}</li>
+				<li><strong>Service:</strong> {{project.service}}</li>
+			</ul>
+			<p>Description: {{project.description}}</p>
+			<br/>
+			<a href="{{project.url}}">Visit Website</a>
+		</div>
+	</div>
+{{else}}
+	<div class="row column"><p>No projects.</p></div>
+{{/if}}

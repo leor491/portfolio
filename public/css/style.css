@@ -1,0 +1,28 @@
+
+.small-img {
+	width: 80px;
+}
+
+.medium-img {
+	width: 275px;
+}
+
+.row {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.column {
+	padding: 0px 15px 0px 15px;	
+}
+
+.portfolio_item {
+	width: 25%;
+	float:left;
+}
+
+.two_col {
+	width: 50%;
+	float: left;
+}
